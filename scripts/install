@@ -91,6 +91,7 @@ ynh_script_progression "Adding $app's configuration files..."
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
+chown -R www-data: "$install_dir"
 ### `ynh_config_add_phpfpm` is used to set up a PHP config.
 ### You can remove it if your app doesn't use PHP.
 ### `ynh_config_add_phpfpm` will use the files conf/extra_php-fpm.conf
@@ -173,7 +174,7 @@ ynh_config_add_logrotate
 
 # Installation with curl
 ynh_script_progression "Finalizing installation..."
-ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
+# ynh_local_curl "/INSTALL_PATH" "key1=value1" "key2=value2" "key3=value3"
 
 #=================================================
 # START SYSTEMD SERVICE
