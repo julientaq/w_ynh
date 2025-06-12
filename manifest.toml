@@ -128,6 +128,6 @@ ram.runtime = "50M"
     [resources.apt]
     # This will automatically install/uninstall the following apt packages
     # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "php8.4, curl, mbstring, xml, intl, gd, imagick"
+    packages = "php8.4, php8.4-curl, php8.4-mbstring, xphp8.4-ml, php8.4-intl, php8.4-gd, php8.4-imagick"
 
 
